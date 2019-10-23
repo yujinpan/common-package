@@ -1,6 +1,6 @@
 # 简介
 
-JavaScript 与 TypeScript 代码的基础打包环境。
+JavaScript 与 TypeScript 代码的打包的基础环境。
 
 - rollup 打包 es/cjs 模块
 - eslint 校验代码
