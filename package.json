@@ -1,5 +1,5 @@
 {
-  "name": "common-package",
+  "name": "package-base",
   "version": "1.0.0",
   "author": "yujinpan",
   "main": "dist/index.common.js",
@@ -54,12 +54,12 @@
     "last 2 versions"
   ],
   "bugs": {
-    "url": "https://github.com/yujinpan/common-package/issues"
+    "url": "https://github.com/yujinpan/package-base/issues"
   },
-  "homepage": "https://github.com/yujinpan/common-package#readme",
+  "homepage": "https://github.com/yujinpan/package-base#readme",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com:yujinpan/common-package.git"
+    "url": "git+ssh://git@github.com:yujinpan/package-base.git"
   }
 }
