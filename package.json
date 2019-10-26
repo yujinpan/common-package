@@ -15,8 +15,9 @@
     "types/*.d.ts"
   ],
   "scripts": {
-    "build": "cross-env NODE_ENV=production node build/build.js",
+    "build": "cross-env NODE_ENV=production npm run build:js && npm run build:types",
     "test": "karma start test/unit/karma.config.js",
+    "build:js": "node build/build.js",
     "build:types": "tsc --emitDeclarationOnly"
   },
   "dependencies": {},
