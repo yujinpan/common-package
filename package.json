@@ -18,7 +18,8 @@
     "build": "cross-env NODE_ENV=production npm run build:js && npm run build:types",
     "test": "karma start test/unit/karma.config.js",
     "build:js": "node build/build.js",
-    "build:types": "tsc --emitDeclarationOnly"
+    "build:types": "tsc --emitDeclarationOnly && eslint --fix types/**",
+    "lint": "eslint --fix ./**"
   },
   "dependencies": {},
   "devDependencies": {
