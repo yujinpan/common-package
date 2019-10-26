@@ -1,27 +1,25 @@
 /**
  * eslint + prettier 校验代码
- * 1. [eslint rules](http://eslint.cn/docs/rules/)
- * 2. [prettier rules](https://prettier.io/docs/en/options.html)
  */
 module.exports = {
   root: true,
 
-  env: {
-    node: true
-  },
+  extends: [
+    "plugin:@typescript-eslint/recommended",
+    "prettier"  ,
+    "prettier/@typescript-eslint",
+  ],
 
-  extends: ['plugin:prettier/recommended'],
-
-  plugins: ['prettier', '@typescript-eslint'],
+  plugins: ["prettier", "@typescript-eslint"],
 
   rules: {
-    'prettier/prettier': [
-      'error',
-      { singleQuote: true, arrowParens: 'always',  semi: true }
+    "prettier/prettier": [
+      "error",
+      { singleQuote: true, arrowParens: "always", semi: true }
     ],
-    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    eqeqeq: ['error', 'always']
+    "no-console": process.env.NODE_ENV === "production" ? "error" : "off",
+    eqeqeq: ["error", "always"]
   },
 
-  parser: "@typescript-eslint/parser",
+  parser: "@typescript-eslint/parser"
 };
