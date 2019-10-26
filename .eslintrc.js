@@ -12,7 +12,7 @@ module.exports = {
 
   extends: ['plugin:prettier/recommended'],
 
-  plugins: ['prettier'],
+  plugins: ['prettier', '@typescript-eslint'],
 
   rules: {
     'prettier/prettier': [
@@ -23,5 +23,5 @@ module.exports = {
     eqeqeq: ['error', 'always']
   },
 
-  parser: "babel-eslint",
+  parser: "@typescript-eslint/parser",
 };

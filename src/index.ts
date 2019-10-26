@@ -1,4 +1,4 @@
-import { Msg } from 'types/index.d.ts';
+type Msg = string;
 
 export function sayMsg(msg: Msg): Msg {
   return msg;
