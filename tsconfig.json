@@ -1,7 +1,12 @@
 {
-  "include": ["src"],
+  "include": ["src/**/*"],
   "compilerOptions": {
     "declaration": true,
-    "declarationDir": "types"
+    "declarationDir": "types",
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "src": ["./src"]
+    }
   }
 }

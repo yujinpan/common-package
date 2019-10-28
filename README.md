@@ -58,3 +58,8 @@ const multiOption = [
 
 - 运行命令 `npm run build` 进行打包
 - 运行命令 `npm publish` 发布包（需要登陆 npm）
+
+## 注意事项
+
+- `./src` 目录在项目中（src/test）中都配置了简写路径，路径名为 `src`，
+  配置其他的参考 `build/alias.js` 与 `tsconfig.json` 中的 `paths` 参数。
