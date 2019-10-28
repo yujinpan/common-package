@@ -19,6 +19,7 @@ build(config.multiOption).then(() => {
 function build(options) {
   return Promise.all(
     options.map((option) => {
+      // eslint-disable-next-line prefer-const
       let { input, output } = option;
       if (!Array.isArray(output)) {
         output = [output];

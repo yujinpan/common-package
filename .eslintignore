@@ -1,2 +1,4 @@
 dist
 stat
+node_modules
+*.md

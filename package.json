@@ -19,7 +19,7 @@
     "test": "karma start test/unit/karma.config.js",
     "build:js": "node build/build.js",
     "build:types": "tsc --emitDeclarationOnly && eslint --fix types/**",
-    "lint": "eslint --fix ./**"
+    "lint": "eslint --fix './**'"
   },
   "dependencies": {},
   "devDependencies": {
