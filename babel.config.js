@@ -6,7 +6,8 @@ module.exports = {
   plugins: [
     '@babel/plugin-proposal-export-default-from',
     '@babel/proposal-class-properties',
-    '@babel/proposal-object-rest-spread'
+    '@babel/proposal-object-rest-spread',
+    '@babel/plugin-transform-runtime'
   ],
   exclude: 'node_modules/**'
 };

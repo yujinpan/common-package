@@ -16,7 +16,7 @@ module.exports = {
       extensions
     }),
     commonjs(),
-    babel({ extensions, include: ['src/**/*'] }),
+    babel({ extensions, include: ['src/**/*'], runtimeHelpers: true }),
     json(),
     visualizer({
       filename: './stat/statistics.html'
