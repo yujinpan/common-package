@@ -1,18 +1,22 @@
 const rollup = require('rollup');
 const terser = require('terser');
 const fs = require('fs');
-const config = require('./config');
 
+const config = require('./config');
+const utils = require('./utils');
 const defaultRollupConfig = require('./rollup.config.js');
 
-// create output dir
-if (!fs.existsSync(config.outputDir)) {
-  fs.mkdirSync(config.outputDir);
-}
+// 清空目录
+fs.rmdirSync(config.typesDir, { recursive: true });
+fs.mkdirSync(config.typesDir);
+fs.rmdirSync(config.outputDir, { recursive: true });
+fs.mkdirSync(config.outputDir);
 
 // run build
-build(config.multiOption).then(() => {
+build(config.inputFiles.map(utils.createRollupFileOption)).then(() => {
+  // eslint-disable-next-line no-console
   console.log('build completed!');
+  // eslint-disable-next-line no-console
 }, console.error);
 
 // build: rollup -> terser
@@ -53,8 +57,10 @@ function build(options) {
 // write code to file
 function write(dest, code) {
   return new Promise((resolve, reject) => {
+    fs.mkdirSync(dest.replace(/\/[^/]+$/, ''), { recursive: true });
     fs.writeFile(dest, code, (err) => {
       if (err) return reject(err);
+      // eslint-disable-next-line no-console
       console.log(blue(dest) + ' ' + getSize(code));
       resolve();
     });

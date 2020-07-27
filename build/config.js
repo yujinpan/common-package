@@ -5,35 +5,13 @@ const banner =
   ' * Released under the MIT License.\n' +
   ' */\n';
 
-const outputDir = 'dist';
-
 // multi package
-const multiOption = [
-  {
-    input: 'src/index.ts',
-    output: createOutputOptions('index')
-  },
-  {
-    input: 'src/index-js.js',
-    output: createOutputOptions('index-js')
-  }
-];
-
-function createOutputOptions(name) {
-  return [
-    {
-      file: `${outputDir}/${name}.common.js`,
-      format: 'cjs'
-    },
-    {
-      file: `${outputDir}/${name}.esm.js`,
-      format: 'es'
-    }
-  ];
-}
+const inputFiles = ['src/index.ts', 'src/index-js.js'];
 
 module.exports = {
   banner,
-  multiOption,
-  outputDir
+  inputFiles,
+  inputDir: 'src',
+  outputDir: 'dist',
+  typesDir: 'types'
 };
