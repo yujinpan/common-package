@@ -39,23 +39,15 @@ JavaScript 与 TypeScript 代码的打包的基础环境。
 - 引入 `example.ts` 中的内容编写单元测试
 - 运行命令 `npm test` 进行测试，然后发现问题进行回归
 
-> 如果需要 debug，请关闭 `test/unit/karma.config.js` 中的 singleRun 选项。
+> 如果需要 debug，请关闭 `test/unit/karma.config.js` 中的 `singleRun` 选项。
 
 ## 发布
 
 - 在 `build/config.js` 中配置入口文件，例如上面的 `example.ts`
 
 ```js
-const multiOption = [
-  {
-    // 入口
-    input: "src/example.ts",
-
-    // 创建输出配置
-    // createOutputOptions 函数传入参数为输出的文件名
-    output: createOutputOptions("example")
-  }
-];
+// multi package
+const inputFiles = ["src/example.ts"];
 ```
 
 - 运行命令 `npm run build` 进行打包
