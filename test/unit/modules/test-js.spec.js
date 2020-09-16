@@ -1,4 +1,4 @@
-import { sayMsg } from 'src';
+import { sayMsg } from '@/index-js';
 
 describe('module test:', () => {
   it('input will be output', () => {

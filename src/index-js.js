@@ -2,7 +2,7 @@
  * @param {Msg} msg
  */
 export function sayMsg(msg) {
-  alert(msg);
+  return msg;
 }
 
 // test
