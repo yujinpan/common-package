@@ -3,6 +3,7 @@
  * (c) 2019-2020 yujinpan
  * Released under the MIT License.
  */
+
 function sayMsg(msg) {
   return msg;
 } // test
