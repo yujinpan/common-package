@@ -1,4 +1,7 @@
+const path = require('path');
+
 const config = require('./config');
+const tsPaths = require('../tsconfig.json').compilerOptions.paths;
 
 /**
  * 创建配置项
@@ -15,16 +18,41 @@ function createRollupFileOption(filePath) {
     output: [
       {
         file: `${outputName}.common.js`,
-        format: 'cjs'
+        format: 'cjs',
+        banner: config.banner
       },
       {
         file: `${outputName}.esm.js`,
-        format: 'es'
+        format: 'es',
+        banner: config.banner
       }
     ]
   };
 }
 
+function getAliasFromTSConfig() {
+  const aliasConfig = {};
+
+  for (const key in tsPaths) {
+    if (tsPaths[key].length > 1) {
+      console.warn(
+        'alias.config.js warn:',
+        'tsconfig.json paths value must be only one.\n'
+      );
+    }
+    // must use root path
+    aliasConfig[transformPath(key)] =
+      path.resolve('./') + '/' + transformPath(tsPaths[key][0]);
+  }
+
+  return aliasConfig;
+}
+
+function transformPath(path) {
+  return path.replace('/*', '');
+}
+
 module.exports = {
-  createRollupFileOption
+  createRollupFileOption,
+  getAliasFromTSConfig
 };

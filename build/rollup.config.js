@@ -4,22 +4,31 @@ const json = require('rollup-plugin-json');
 const commonjs = require('rollup-plugin-commonjs');
 const alias = require('rollup-plugin-alias');
 const visualizer = require('rollup-plugin-visualizer');
+const sizes = require('rollup-plugin-sizes');
+
+const pkg = require('../package.json');
+const utils = require('./utils');
 
 require('dotenv').config();
 
+const externalReg = new RegExp(
+  '^(' + Object.keys(pkg.dependencies).join('|') + ')(/|$)'
+);
 const extensions = ['.js', '.jsx', '.ts', '.tsx'];
 
 module.exports = {
   plugins: [
-    alias(require('./alias')),
+    alias(utils.getAliasFromTSConfig()),
     resolve({
       extensions
     }),
     commonjs(),
     babel({ extensions, include: ['src/**/*'], runtimeHelpers: true }),
     json(),
+    sizes(),
     visualizer({
       filename: './stat/statistics.html'
     })
-  ]
+  ],
+  external: (id) => externalReg.test(id)
 };
