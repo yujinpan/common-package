@@ -12,10 +12,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
  * @param {Msg} msg
  */
 function sayMsg(msg) {
-  alert(msg);
+  return msg;
 } // test
-
-var x = '1';
-sayMsg(x);
 
 exports.sayMsg = sayMsg;

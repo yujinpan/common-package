@@ -8,10 +8,7 @@
  * @param {Msg} msg
  */
 function sayMsg(msg) {
-  alert(msg);
+  return msg;
 } // test
-
-var x = '1';
-sayMsg(x);
 
 export { sayMsg };
