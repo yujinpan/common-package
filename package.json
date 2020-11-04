@@ -17,7 +17,7 @@
     "build": "cross-env NODE_ENV=production npm run build:js && npm run build:types",
     "test": "karma start test/unit/karma.config.js",
     "build:js": "node build/build.js",
-    "build:types": "tsc --emitDeclarationOnly && eslint --fix 'types/**/*'",
+    "build:types": "ttsc --emitDeclarationOnly && eslint --fix 'types/**/*'",
     "lint": "eslint --fix './**/*'"
   },
   "dependencies": {},
@@ -53,7 +53,9 @@
     "rollup-plugin-node-resolve": "^5.0.1",
     "rollup-plugin-sizes": "^1.0.3",
     "rollup-plugin-visualizer": "^1.1.1",
+    "ttypescript": "^1.5.12",
     "typescript": "^3.6.4",
+    "typescript-transform-paths": "^2.0.2",
     "webpack": "^4.41.2"
   },
   "browserslist": [
