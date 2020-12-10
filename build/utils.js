@@ -22,7 +22,7 @@ function createRollupFileOption(filePath) {
         banner: config.banner
       },
       {
-        file: `${outputName}.esm.js`,
+        file: `${outputName}.js`,
         format: 'es',
         banner: config.banner
       }

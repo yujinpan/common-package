@@ -4,7 +4,6 @@ const json = require('rollup-plugin-json');
 const commonjs = require('rollup-plugin-commonjs');
 const alias = require('rollup-plugin-alias');
 const visualizer = require('rollup-plugin-visualizer');
-const sizes = require('rollup-plugin-sizes');
 
 const pkg = require('../package.json');
 const utils = require('./utils');
@@ -25,7 +24,6 @@ module.exports = {
     commonjs(),
     babel({ extensions, include: ['src/**/*'], runtimeHelpers: true }),
     json(),
-    sizes(),
     visualizer({
       filename: './stat/statistics.html'
     })
