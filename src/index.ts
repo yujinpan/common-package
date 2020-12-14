@@ -1,3 +1,5 @@
+import { test } from './module/test';
+
 export type Msg = string;
 
 export function sayMsg(msg: Msg): Msg {
@@ -8,3 +10,4 @@ export function sayMsg(msg: Msg): Msg {
 const x = '1';
 
 sayMsg(x);
+test();

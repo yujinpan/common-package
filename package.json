@@ -20,7 +20,10 @@
     "build:types": "ttsc --emitDeclarationOnly && eslint --fix 'types/**/*'",
     "lint": "eslint --fix './**/*'"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@babel/runtime": "^7.12.5",
+    "style-inject": "^0.3.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.6.4",
     "@babel/plugin-proposal-class-properties": "^7.10.1",
@@ -29,6 +32,11 @@
     "@babel/plugin-transform-runtime": "^7.10.3",
     "@babel/preset-env": "^7.6.3",
     "@babel/preset-typescript": "^7.6.0",
+    "@rollup/plugin-alias": "^3.1.1",
+    "@rollup/plugin-babel": "^5.2.2",
+    "@rollup/plugin-commonjs": "^15.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^9.0.0",
     "@types/jasmine": "^3.4.4",
     "@typescript-eslint/eslint-plugin": "^2.5.0",
     "@typescript-eslint/parser": "^2.5.0",
@@ -38,6 +46,7 @@
     "eslint": "^5.16.0",
     "eslint-config-prettier": "^6.4.0",
     "eslint-plugin-prettier": "^3.1.0",
+    "glob": "^7.1.6",
     "jasmine-core": "^3.5.0",
     "karma": "^4.4.1",
     "karma-chrome-launcher": "^3.1.0",
@@ -46,11 +55,6 @@
     "karma-webpack": "^4.0.2",
     "prettier": "1.18.2",
     "rollup": "^1.13.1",
-    "rollup-plugin-alias": "^1.5.2",
-    "rollup-plugin-babel": "^4.3.2",
-    "rollup-plugin-commonjs": "^10.0.0",
-    "rollup-plugin-json": "^4.0.0",
-    "rollup-plugin-node-resolve": "^5.0.1",
     "rollup-plugin-visualizer": "^1.1.1",
     "ttypescript": "^1.5.12",
     "typescript": "^3.6.4",

@@ -6,7 +6,7 @@ const banner =
   ' */\n';
 
 // multi package
-const inputFiles = ['src/index.ts', 'src/index-js.js'];
+const inputFiles = ['src/**/!(*.d|types).*(ts|js)'];
 
 module.exports = {
   banner,
