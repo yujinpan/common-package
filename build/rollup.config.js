@@ -5,8 +5,7 @@ const commonjs = require('@rollup/plugin-commonjs');
 const alias = require('@rollup/plugin-alias');
 const visualizer = require('rollup-plugin-visualizer');
 const aliasConfig = require('../alias.config');
-
-const extensions = ['.js', '.jsx', '.ts', '.tsx'];
+const config = require('./config');
 
 require('dotenv').config();
 
@@ -16,11 +15,11 @@ module.exports = {
       entries: aliasConfig
     }),
     resolve({
-      extensions
+      extensions: config.extensions
     }),
     commonjs(),
     babel({
-      extensions,
+      extensions: config.extensions,
       exclude: 'node_modules/**',
       babelHelpers: 'runtime'
     }),

@@ -3,6 +3,7 @@ const glob = require('glob');
 const config = require('./config');
 const aliasConfig = require('../alias.config');
 const rollupConfig = require('./rollup.config');
+const resolve = require('resolve');
 
 /**
  * 创建配置项
@@ -63,10 +64,14 @@ function transformToRelativePath(codes, filepath) {
         // read alias path config
         for (const key in aliasConfig) {
           if (item.startsWith(key)) {
-            return path.relative(
-              filepath,
-              item.replace(new RegExp('^' + key), aliasConfig[key])
-            );
+            return path
+              .relative(
+                path.dirname(filepath),
+                getDirname(
+                  item.replace(new RegExp('^' + key), aliasConfig[key])
+                )
+              )
+              .replace(/.ts$/, '');
           }
         }
         console.warn(
@@ -84,6 +89,10 @@ function transformToRelativePath(codes, filepath) {
     });
   }
   return codes;
+}
+
+function getDirname(p) {
+  return resolve.sync(p, { extensions: config.extensions });
 }
 
 module.exports = {
