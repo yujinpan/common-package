@@ -4,7 +4,7 @@
     "target": "ESNext",
     "module": "ESNext",
     "declaration": true,
-    "declarationDir": "types",
+    "declarationDir": "dist",
     "moduleResolution": "node",
     "baseUrl": ".",
     "paths": {

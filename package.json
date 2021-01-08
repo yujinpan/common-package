@@ -8,16 +8,15 @@
     "package",
     "rollup"
   ],
-  "typings": "types/index.d.ts",
+  "typings": "dist/index.d.ts",
   "files": [
-    "dist",
-    "types"
+    "dist"
   ],
   "scripts": {
     "build": "cross-env NODE_ENV=production npm run build:js && npm run build:types",
     "test": "karma start test/unit/karma.config.js",
     "build:js": "node build/build.js",
-    "build:types": "ttsc --emitDeclarationOnly && eslint --fix 'types/**/*'",
+    "build:types": "ttsc --emitDeclarationOnly && eslint --fix dist/**/*.d.ts",
     "lint": "eslint --fix './**/*'"
   },
   "dependencies": {

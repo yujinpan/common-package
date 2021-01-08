@@ -13,6 +13,6 @@ module.exports = {
   inputFiles,
   inputDir: 'src',
   outputDir: 'dist',
-  typesDir: 'types',
+  typesDir: require('../tsconfig.json').compilerOptions.declarationDir,
   extensions: ['.js', '.jsx', '.ts', '.tsx']
 };
