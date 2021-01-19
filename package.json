@@ -2,26 +2,23 @@
   "name": "package-base",
   "version": "1.1.0",
   "author": "yujinpan",
-  "main": "dist/index.common.js",
-  "module": "dist/index.esm.js",
+  "module": "dist/index.js",
   "keywords": [
-    "package",
-    "rollup"
+    "js build",
+    "ts build",
+    "unit test"
   ],
   "typings": "dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "cross-env NODE_ENV=production npm run build:js && npm run build:types",
+    "build": "cross-env NODE_ENV=production rollupx && eslint --fix dist/**/*.d.ts",
     "test": "karma start test/unit/karma.config.js",
-    "build:js": "node build/build.js",
-    "build:types": "ttsc --emitDeclarationOnly && eslint --fix dist/**/*.d.ts",
     "lint": "eslint --fix './**/*'"
   },
   "dependencies": {
     "@babel/runtime": "^7.12.5",
-    "@babel/runtime-corejs2": "^7.12.5",
     "style-inject": "^0.3.0"
   },
   "devDependencies": {
@@ -32,11 +29,6 @@
     "@babel/plugin-transform-runtime": "^7.10.3",
     "@babel/preset-env": "^7.6.3",
     "@babel/preset-typescript": "^7.6.0",
-    "@rollup/plugin-alias": "^3.1.1",
-    "@rollup/plugin-babel": "^5.2.2",
-    "@rollup/plugin-commonjs": "^15.0.0",
-    "@rollup/plugin-json": "^4.1.0",
-    "@rollup/plugin-node-resolve": "^9.0.0",
     "@types/jasmine": "^3.4.4",
     "@typescript-eslint/eslint-plugin": "^2.5.0",
     "@typescript-eslint/parser": "^2.5.0",
@@ -46,7 +38,6 @@
     "eslint": "^5.16.0",
     "eslint-config-prettier": "^6.4.0",
     "eslint-plugin-prettier": "^3.1.0",
-    "glob": "^7.1.6",
     "jasmine-core": "^3.5.0",
     "karma": "^4.4.1",
     "karma-chrome-launcher": "^3.1.0",
@@ -54,12 +45,8 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^4.0.2",
     "prettier": "1.18.2",
-    "resolve": "^1.19.0",
-    "rollup": "^1.13.1",
-    "rollup-plugin-visualizer": "^1.1.1",
-    "ttypescript": "^1.5.12",
+    "rollupx": "^1.1.2",
     "typescript": "^3.6.4",
-    "typescript-transform-paths": "^2.0.2",
     "webpack": "^4.41.2"
   },
   "browserslist": [
