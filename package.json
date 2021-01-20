@@ -19,7 +19,8 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.12.5",
-    "style-inject": "^0.3.0"
+    "style-inject": "^0.3.0",
+    "core-js": "^3.8.1"
   },
   "devDependencies": {
     "@babel/core": "^7.6.4",
@@ -45,7 +46,7 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^4.0.2",
     "prettier": "1.18.2",
-    "rollupx": "^1.1.2",
+    "rollupx": "^1.1.7",
     "typescript": "^3.6.4",
     "webpack": "^4.41.2"
   },
