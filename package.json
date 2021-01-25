@@ -17,10 +17,12 @@
     "test": "karma start test/unit/karma.config.js",
     "lint": "eslint --fix './**/*'"
   },
+  "peerDependencies": {
+    "core-js": "^3.x"
+  },
   "dependencies": {
     "@babel/runtime": "^7.x",
-    "style-inject": "^0.x",
-    "core-js": "^3.x"
+    "style-inject": "^0.x"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
