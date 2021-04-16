@@ -21,7 +21,7 @@
     "core-js": "^3.x"
   },
   "dependencies": {
-    "@babel/runtime": "^7.x",
+    "@babel/runtime": "^7.12.x",
     "style-inject": "^0.x"
   },
   "devDependencies": {
@@ -42,7 +42,7 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^4.0.2",
     "prettier": "1.18.2",
-    "rollupx": "^1.1.8",
+    "rollupx": "^1.2.12",
     "typescript": "^3.6.4",
     "webpack": "^4.41.2"
   },
