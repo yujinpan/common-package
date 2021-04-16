@@ -17,15 +17,14 @@
     "test": "karma start test/unit/karma.config.js",
     "lint": "eslint --fix './**/*'"
   },
-  "peerDependencies": {
-    "core-js": "^3.x"
-  },
   "dependencies": {
     "@babel/runtime": "^7.12.x",
-    "style-inject": "^0.x"
+    "style-inject": "^0.x",
+    "core-js": "^3.x"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
+    "@babel/preset-typescript": "^7.13.0",
     "@types/jasmine": "^3.4.4",
     "@typescript-eslint/eslint-plugin": "^2.5.0",
     "@typescript-eslint/parser": "^2.5.0",
