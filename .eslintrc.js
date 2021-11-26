@@ -16,7 +16,12 @@ module.exports = {
     '@typescript-eslint/no-use-before-define': ['error', {'functions': false, 'classes': false}],
     'prettier/prettier': [
       'error',
-      {singleQuote: true, arrowParens: 'always', semi: true}
+      {
+        singleQuote: true,
+        arrowParens: 'always',
+        semi: true,
+        trailingComma: 'none'
+      }
     ],
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     eqeqeq: ['error', 'always']
