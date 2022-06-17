@@ -13,8 +13,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "cross-env NODE_ENV=production rollupx && eslint --fix dist/**/*.d.ts",
-    "test": "karma start test/unit/karma.config.js",
+    "build": "cross-env NODE_ENV=production rollupx && eslint --fix dist/**/*.d.ts --no-ignore",
+    "test": "karma start karma.config.js",
     "lint": "eslint --fix './**/*'"
   },
   "dependencies": {
@@ -25,7 +25,7 @@
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/preset-typescript": "^7.13.0",
-    "@types/jasmine": "^3.4.4",
+    "@types/jasmine": "^4.0.3",
     "@typescript-eslint/eslint-plugin": "^2.5.0",
     "@typescript-eslint/parser": "^2.5.0",
     "babel-loader": "^8.0.6",
@@ -34,15 +34,16 @@
     "eslint": "^5.16.0",
     "eslint-config-prettier": "^6.4.0",
     "eslint-plugin-prettier": "^3.1.0",
-    "jasmine-core": "^3.5.0",
-    "karma": "^4.4.1",
+    "jasmine-core": "^4.2.0",
+    "karma": "^5.2.3",
     "karma-chrome-launcher": "^3.1.0",
-    "karma-jasmine": "^2.0.1",
-    "karma-sourcemap-loader": "^0.3.7",
+    "karma-jasmine": "^4.0.1",
+    "karma-sourcemap-loader": "^0.3.8",
     "karma-webpack": "^4.0.2",
-    "prettier": "1.18.2",
-    "rollupx": "^1.2.12",
-    "typescript": "^3.6.4",
+    "null-loader": "^4.0.1",
+    "prettier": "^2.5.1",
+    "rollupx": "^2.0.7",
+    "typescript": "^3.9.10",
     "webpack": "^4.41.2"
   },
   "browserslist": [

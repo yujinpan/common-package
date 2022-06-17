@@ -1,16 +1,22 @@
 module.exports = (config) => {
   config.set({
     frameworks: ['jasmine'],
-    files: ['index.js'],
+
+    // single file test
+    // files: ['src/module/*.spec.+(js|ts)'],
+    files: ['src/**/*.spec.+(js|ts)'],
+
     preprocessors: {
-      'index.js': ['webpack', 'sourcemap']
+      'src/**/*.+(js|ts)': ['webpack', 'sourcemap']
     },
+
     browsers: ['Chrome'],
     singleRun: true,
+
     webpack: {
       mode: 'development',
       resolve: {
-        alias: require('../../alias.config'),
+        alias: require('./alias.config'),
         extensions: ['.ts', '.js']
       },
       devtool: 'inline-source-map',
@@ -22,10 +28,15 @@ module.exports = (config) => {
             use: {
               loader: 'babel-loader'
             }
+          },
+          {
+            exclude: /\.(js|ts)$/,
+            loader: 'null-loader'
           }
         ]
       }
     },
+
     plugins: [
       'karma-webpack',
       'karma-sourcemap-loader',

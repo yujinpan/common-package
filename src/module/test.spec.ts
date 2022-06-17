@@ -1,7 +1,7 @@
 import { sayMsg } from '@/index';
 
-describe('module test:', () => {
-  it('input will be output', () => {
+describe('test', () => {
+  it('test', () => {
     const input = 'test';
     expect(sayMsg(input)).toBe(input);
   });

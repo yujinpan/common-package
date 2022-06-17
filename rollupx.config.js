@@ -5,7 +5,5 @@ module.exports = {
     ` * (c) 2019-${new Date().getFullYear()} yujinpan\n` +
     ' * Released under the MIT License.\n' +
     ' */\n',
-  inputFiles: ['src/**/!(*.d).*(ts|js)'],
-  typesOutputDir: 'dist',
-  singleFile: false
+  outputDir: 'dist'
 };
