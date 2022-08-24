@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = (config) => {
   config.set({
     frameworks: ['jasmine'],
@@ -16,7 +18,9 @@ module.exports = (config) => {
     webpack: {
       mode: 'development',
       resolve: {
-        alias: require('./alias.config'),
+        alias: {
+          '@': path.resolve(__dirname, './src'),
+        },
         extensions: ['.ts', '.js'],
       },
       devtool: 'inline-source-map',
