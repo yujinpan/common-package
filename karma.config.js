@@ -7,7 +7,7 @@ module.exports = (config) => {
     files: ['src/**/*.spec.+(js|ts)'],
 
     preprocessors: {
-      'src/**/*.+(js|ts)': ['webpack', 'sourcemap']
+      'src/**/*.+(js|ts)': ['webpack', 'sourcemap'],
     },
 
     browsers: ['Chrome'],
@@ -17,7 +17,7 @@ module.exports = (config) => {
       mode: 'development',
       resolve: {
         alias: require('./alias.config'),
-        extensions: ['.ts', '.js']
+        extensions: ['.ts', '.js'],
       },
       devtool: 'inline-source-map',
       module: {
@@ -26,22 +26,22 @@ module.exports = (config) => {
             test: /\.(js|ts)$/,
             exclude: /node_modules/,
             use: {
-              loader: 'babel-loader'
-            }
+              loader: 'babel-loader',
+            },
           },
           {
             exclude: /\.(js|ts)$/,
-            loader: 'null-loader'
-          }
-        ]
-      }
+            loader: 'null-loader',
+          },
+        ],
+      },
     },
 
     plugins: [
       'karma-webpack',
       'karma-sourcemap-loader',
       'karma-jasmine',
-      'karma-chrome-launcher'
-    ]
+      'karma-chrome-launcher',
+    ],
   });
 };

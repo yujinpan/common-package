@@ -9,7 +9,7 @@ const aliasConfig = (function getAliasFromTSConfig() {
     if (tsPaths[key].length > 1) {
       console.warn(
         'alias.config.js warn:',
-        'tsconfig.json paths value must be only one.\n'
+        'tsconfig.json paths value must be only one.\n',
       );
     }
     // must use root path

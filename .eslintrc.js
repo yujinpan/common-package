@@ -4,27 +4,26 @@
 module.exports = {
   root: true,
 
-  extends: [
-    'plugin:@typescript-eslint/recommended',
-    'prettier',
-    'prettier/@typescript-eslint'
-  ],
+  extends: ['plugin:@typescript-eslint/recommended', 'prettier'],
 
   plugins: ['prettier', '@typescript-eslint'],
 
   rules: {
-    '@typescript-eslint/no-use-before-define': ['error', {'functions': false, 'classes': false}],
+    '@typescript-eslint/no-use-before-define': [
+      'error',
+      { functions: false, classes: false },
+    ],
     'prettier/prettier': [
       'error',
       {
         singleQuote: true,
         arrowParens: 'always',
         semi: true,
-        trailingComma: 'none'
-      }
+        trailingComma: 'all',
+      },
     ],
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    eqeqeq: ['error', 'always']
+    eqeqeq: ['error', 'always'],
   },
 
   parser: '@typescript-eslint/parser',
@@ -34,8 +33,8 @@ module.exports = {
       files: ['*.js'],
       rules: {
         '@typescript-eslint/no-var-requires': 'off',
-        '@typescript-eslint/explicit-function-return-type': 'off'
-      }
-    }
-  ]
+        '@typescript-eslint/explicit-function-return-type': 'off',
+      },
+    },
+  ],
 };
