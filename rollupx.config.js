@@ -5,5 +5,5 @@ module.exports = {
     ` * (c) 2019-${new Date().getFullYear()} yujinpan\n` +
     ' * Released under the MIT License.\n' +
     ' */\n',
-  outputDir: 'dist',
+  outputDir: 'lib',
 };
