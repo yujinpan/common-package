@@ -13,6 +13,7 @@
     "dist"
   ],
   "scripts": {
+    "start": "webpack serve --open",
     "build": "cross-env NODE_ENV=production rollupx",
     "test": "karma start karma.config.js",
     "lint": "eslint --fix './**/*'"
@@ -28,12 +29,15 @@
     "@types/jasmine": "^4.3.0",
     "@typescript-eslint/eslint-plugin": "^5.34.0",
     "@typescript-eslint/parser": "^5.34.0",
+    "ajv": "^8.11.0",
     "babel-loader": "^8.2.5",
     "cross-env": "^7.0.3",
+    "css-loader": "^6.7.1",
     "dotenv": "^16.0.1",
     "eslint": "^8.22.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
+    "html-webpack-plugin": "^5.5.0",
     "jasmine-core": "^4.3.0",
     "karma": "^6.4.0",
     "karma-chrome-launcher": "^3.1.1",
@@ -43,8 +47,13 @@
     "null-loader": "^4.0.1",
     "prettier": "^2.5.1",
     "rollupx": "^2.0.24",
+    "sass": "^1.54.5",
+    "sass-loader": "^13.0.2",
+    "style-loader": "^3.3.1",
     "typescript": "^4.7.4",
-    "webpack": "^5.74.0"
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.10.0"
   },
   "browserslist": [
     "> 1%",
