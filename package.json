@@ -17,10 +17,10 @@
     "build": "cross-env NODE_ENV=production rollupx",
     "test": "karma start karma.config.js",
     "lint": "eslint --fix './**/*'",
-    "docs:dev": "npm run generate:raws && vitepress dev docs",
-    "docs:build": "npm run generate:raws && vitepress build docs",
-    "docs:serve": "vitepress serve docs --port 8080",
-    "generate:raws": "node docs/.vitepress/components/raws-generate.js"
+    "docs:dev": "cd docs && npm start",
+    "docs:build": "cd docs &&npm run build",
+    "docs:serve": "cd docs &&npm run preview",
+    "generate:raws": "cd docs &&npm run generate:raws"
   },
   "dependencies": {
     "@babel/runtime": "^7.12.x",
@@ -38,7 +38,6 @@
     "cross-env": "^7.0.3",
     "css-loader": "^6.7.1",
     "dotenv": "^16.0.1",
-    "element-plus": "^2.2.14",
     "eslint": "^8.22.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
@@ -56,8 +55,6 @@
     "sass-loader": "^13.0.2",
     "style-loader": "^3.3.1",
     "typescript": "^4.7.4",
-    "vitepress": "^1.0.0-alpha.10",
-    "vue": "^3.2.37",
     "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.10.0"

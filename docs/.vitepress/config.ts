@@ -52,7 +52,7 @@ const config = defineConfig({
   appearance: true,
 
   // @TODO replace base to your-component
-  base: '/vue3-component-pack/',
+  base: '/package-base/',
 
   title: 'your-component',
   description: 'your-component description',
