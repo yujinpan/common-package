@@ -13,6 +13,7 @@ module.exports = {
       'error',
       { functions: false, classes: false },
     ],
+    '@typescript-eslint/no-explicit-any': 'off',
     'prettier/prettier': [
       'error',
       {
