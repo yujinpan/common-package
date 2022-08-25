@@ -1,3 +1,3 @@
 <template>
-  <HelloWorld msg="Feature-1 content." />
+  <p>Feature-1 content.</p>
 </template>
