@@ -8,7 +8,7 @@
     "ts build",
     "unit test"
   ],
-  "typings": "dist/index.d.ts",
+  "typings": "lib/index.d.ts",
   "files": [
     "lib"
   ],
