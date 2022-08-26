@@ -18,9 +18,9 @@
     "test": "karma start karma.config.js",
     "lint": "eslint --fix './**/*'",
     "docs:dev": "cd docs && npm start",
-    "docs:build": "cd docs &&npm run build",
-    "docs:serve": "cd docs &&npm run preview",
-    "generate:raws": "cd docs &&npm run generate:raws"
+    "docs:build": "cd docs && npm run build",
+    "docs:serve": "cd docs && npm run preview",
+    "generate:raws": "cd docs && npm run generate:raws"
   },
   "dependencies": {
     "@babel/runtime": "^7.12.x",
