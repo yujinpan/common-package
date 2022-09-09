@@ -13,6 +13,8 @@
     "lib"
   ],
   "scripts": {
+    "version": "npm run build",
+    "postversion": "git push origin master && npm publish",
     "start": "webpack serve --open",
     "build": "cross-env NODE_ENV=production rollupx",
     "test": "karma start karma.config.js",
